@@ -5,6 +5,7 @@ function Post({ Titel, Description, ReferencePicture, Price }) {
         <img alt={Description} src={`https:${ReferencePicture}`} />
         <div className="description">{Description}</div>
         <div className="text">
+            <p>what</p>
           <h2>{Titel}</h2>
           <h3>{Price}</h3>
         </div>
