@@ -12,7 +12,7 @@ export default function Home({ posts }) {
       <main>
         <div className="posts">
           {posts.map((p) => {
-            console.log(p);
+            console.log(p.fields);
             return <Post key={p.date} title={p.Title} image={p.ReferencePicture} />
           })}
         </div>
