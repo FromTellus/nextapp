@@ -12,8 +12,8 @@ export default function Home({ posts }) {
       <main>
         <div className="posts">
           {posts.map((p) => {
-            console.log(p, "this is fields");
-            return <Post key={p.Date} title={p.Title} description={p.Description} image={p.File} />
+            console.log("startofP", p.price, "this is title", p.referencePicture.fields.file.url, "This is picture", p.description.content, "this is description");
+            return <Post key={p.Date} title={p.titel} description={p.titel} image={p.referencePicture.fields.file.url} price={p.price} />
           })}
         </div>
       </main>
