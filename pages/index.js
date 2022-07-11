@@ -5,6 +5,7 @@ import { fetchEntries } from './utils/contentfulPosts'
 import Header from './components/Header'
 import Footer from './components/Footer'
 import Post from './components/Post'
+import products from './products'
 
 export default function Home({ posts }) {
   return (
