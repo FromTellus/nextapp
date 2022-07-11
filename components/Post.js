@@ -1,13 +1,12 @@
-function Post({ date, image, title }) {
-    let { file, description } = image
+function Post({ Titel, Description, ReferencePicture, Price }) {
   
     return (
       <div className="post">
-        <img alt={description} src={`https:${file.url}`} />
-        <div className="description">{description}</div>
+        <img alt={Description} src={`https:${ReferencePicture}`} />
+        <div className="description">{Description}</div>
         <div className="text">
-          <h2>{title}</h2>
-          <h3>{date.substring(0, 10)}</h3>
+          <h2>{Titel}</h2>
+          <h3>{Price}</h3>
         </div>
       </div>
     )
