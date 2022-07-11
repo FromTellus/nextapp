@@ -23,7 +23,7 @@ export default function Home({ posts }) {
 export async function getStaticProps() {
   const res = await fetchEntries()
   const posts = await res.map((p) => {
-    return p
+    return p.fields
   })
 
   return {
