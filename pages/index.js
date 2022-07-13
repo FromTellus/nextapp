@@ -3,6 +3,7 @@ import { fetchEntries } from '../util/contentfulPost'
 
 
 import Post from '../components/Post'
+// import Search from '../components/QuantitySearch'
 
 export default function Home({ posts }) {
   return (
@@ -16,6 +17,7 @@ export default function Home({ posts }) {
             return <Post key={p.Date} title={p.titel} description={p.titel} image={p.referencePicture.fields.file.url} price={p.price} />
           })}
         </div>
+        {/* <Search /> */}
       </main>
     </div>
 )};
