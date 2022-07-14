@@ -1,10 +1,13 @@
 import { useState, useEffect } from 'react';
 
-
 const Products = () => {
     const [products, setProducts] = useState([]);
     const [input, setInput] = useState('');
     const [search, setSearch] = useState([]);
+
+    const clickHandler = (e) => {
+        console.log("fires");
+    }
 
     const fetchProducts = async () => {
         const res = await fetch('/api/hello');
@@ -52,15 +55,27 @@ const Products = () => {
             </button>
             <div>{search.map(item => 
                 <div key={item.id}>
+                    <div onClick={clickHandler}>
                     <h2>Product: {item.title}</h2>
                     <p>Quanitity: {item.quantity}</p>
                     <p>Price: {item.price}</p>
+                    </div>
                 </div>)}
             </div>
         </main>
     </div>
     )
 }
-                    
 
-    export default Products;
+const getStaticProps = async () => {
+    const res = await fetch('/api/hello');
+    const data = await res.json();
+    console.log(data);
+    return {
+        props: {
+            data,
+        },
+    }
+}
+
+export default Products;
